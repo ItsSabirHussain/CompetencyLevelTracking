@@ -4,24 +4,13 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const keys = require("../config/keys");
 
-// Load input validation
-const validateProManRegistration = require("../validation/admin");
-const validateProManLogin = require("../validation/promanlogin");
-
-// Load User model
 const Admin = require("../models/admin");
-const Place = require("../models/place");
+const Notifications = require("../models/notifications");
 
-// @route POST /adminregisteration
-// @desc Register user
-// @access Public
+const Place = require("../models/place");
+const User = require("../models/user");
+
 router.post("/promanreg", (req, res) => {
-  // Form validation
-  const { errors, isValid } = validateProManRegistration(req.body);
-  // Check validation
-  if (!isValid) {
-    return res.status(400).json(errors);
-  }
   Admin.findOne({ ID: req.body.ID }).then(proman => {
     if (proman) {
       return res.status(400).json({ ID: "ID already exists" });
@@ -32,66 +21,44 @@ router.post("/promanreg", (req, res) => {
         ID: req.body.ID,
         Key: req.body.Key
       });
-
-      console.log(newProMan);
-
-      // Hash key before saving in database
-      bcrypt.genSalt(10, (err, salt) => {
-        bcrypt.hash(newProMan.Key, salt, (err, hash) => {
-          console.log(err);
-          if (err) throw err;
-          newProMan.Key = hash;
-          newProMan
-            .save()
-            .then(admin => res.json(newProMan))
-            .catch(err => console.log(err));
-        });
-      });
+      newProMan
+        .save()
+        .then(admin => res.json(newProMan))
+        .catch(err => console.log(err));
     }
   });
 });
 
-// @route POST /adminlogin
-// @desc Login admin and return JWT token
-// @access Public
 router.post("/adminlogin", (req, res) => {
   const ID = req.body.ID;
   const Key = req.body.Key;
   console.log(ID);
   console.log(Key);
-  // Find admin by id
   Admin.findOne({ ID: req.body.ID }).then(admin => {
-    // Check if admin exists
     if (!admin) {
       return res.status(404).json({ IDNotFound: "ID not found" });
     }
-    // Check password
-    bcrypt.compare(Key, admin.Key).then(isMatch => {
-      if (isMatch) {
-        // Admin matched
-        // Create JWT Payload
-        const payload = {
-          id: admin.id,
-          ID: admin.ID
-        };
-        // Sign token
-        jwt.sign(
-          payload,
-          keys.secretOrKey,
-          {
-            expiresIn: 31556926 // 1 year in seconds
-          },
-          (err, token) => {
-            res.json({
-              success: true,
-              token: "Bearer " + token
-            });
-          }
-        );
-      } else {
-        return res.status(400).json({ passwordincorrect: "Key incorrect" });
-      }
-    });
+    if (req.body.Key === admin.Key) {
+      const payload = {
+        id: admin.id,
+        ID: admin.ID
+      };
+      jwt.sign(
+        payload,
+        keys.secretOrKey,
+        {
+          expiresIn: 31556926 // 1 year in seconds
+        },
+        (err, token) => {
+          res.json({
+            success: true,
+            token: "Bearer " + token
+          });
+        }
+      );
+    } else {
+      return res.status(400).json({ passwordincorrect: "Key incorrect" });
+    }
   });
 });
 router.post("/getadmin", function(req, res) {
@@ -155,6 +122,34 @@ router.post("/addplace", (req, res) => {
         .save()
         .then(user => res.json(user))
         .catch(err => console.log(err));
+    }
+  });
+});
+
+router.post("/getallnoti", function(req, res) {
+  Notifications.find(function(err, allnoti) {
+    if (allnoti) {
+      return res.json(allnoti);
+    } else {
+      return res.json({ message: "No Notification" });
+    }
+  });
+});
+
+router.post("/deletenoti", function(req, res) {
+  Notifications.deleteOne({ ID: req.body.ID }, function(err, obj) {
+    console.log("there");
+
+    return res.json({ message: "Notification deleted." });
+  });
+});
+
+router.post("/getallusers", function(req, res) {
+  User.find(function(err, user) {
+    if (user) {
+      return res.json(user);
+    } else {
+      return res.json({ message: "There is no users." });
     }
   });
 });

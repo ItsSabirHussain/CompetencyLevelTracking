@@ -19,11 +19,10 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import DashboardIcon from "@material-ui/icons/Dashboard";
 import PeopleIcon from "@material-ui/icons/People";
-import NotificationImportantIcon from "@material-ui/icons/NotificationImportant";
 import Main from "./main";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
-import UpdateProfile from "./updateprofile";
-import AddPlace from "./addplace";
+import AllEmployee from "./allusers";
+import Notifications from "./notifications";
 
 const drawerWidth = 240;
 
@@ -190,22 +189,11 @@ export default function AdminDashboard(props) {
               </ListItemIcon>
               <ListItemText>Dashboard</ListItemText>
             </ListItem>
-            <ListItem button component={Link} to="/admindashboard/addplace">
+            <ListItem button component={Link} to="/admindashboard/allemplist">
               <ListItemIcon>
                 <PeopleIcon fontSize="large" />
               </ListItemIcon>
-              <ListItemText primary="Add Place" />
-            </ListItem>
-            <ListItem
-              button
-              component={Link}
-              to="/admindashboard/aupdateprofile"
-            >
-              <ListItemIcon>
-                <NotificationImportantIcon fontSize="large" />
-              </ListItemIcon>
-
-              <ListItemText primary="Update Profile" />
+              <ListItemText primary="All Employees" />
             </ListItem>
           </div>
         </List>
@@ -213,13 +201,12 @@ export default function AdminDashboard(props) {
       </Drawer>
 
       <Switch>
-        <Route exact path="/admindashboard" component={Main} />
+        <Route exact path="/admindashboard" component={Notifications} />
         <Route
           exact
-          path="/admindashboard/aupdateprofile"
-          component={UpdateProfile}
+          path="/admindashboard/allemplist"
+          component={AllEmployee}
         />
-        <Route exact path="/admindashboard/addplace" component={AddPlace} />
       </Switch>
     </div>
   );

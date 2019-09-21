@@ -19,7 +19,7 @@ function Copyright() {
     <Typography variant="body2" color="textSecondary" align="center">
       {"Copyright © "}
       <Link to="/" style={{ textDecoration: "none" }}>
-        The website{" "}
+        Personal Competency Tracking{" "}
       </Link>
       {new Date().getFullYear()}
       {"."}
@@ -105,13 +105,13 @@ export default function AdminLogin(props) {
             onChange={e => setAdminInfo({ ...adminInfo, Key: e.target.value })}
           />
           <FormControlLabel
-            control={<Checkbox value="remember" color="primary" />}
+            control={<Checkbox value="remember" color="secondary" />}
             label="Remember me"
           />
           <Button
             fullWidth
             variant="contained"
-            color="primary"
+            color="secondary"
             className={classes.submit}
             onClick={onClick}
           >

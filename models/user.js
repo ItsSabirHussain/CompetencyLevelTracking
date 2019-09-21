@@ -16,9 +16,23 @@ const User = new Schema({
     type: String,
     required: true
   },
-  Interests: {
-    type: String,
-    value: [String]
+  City: {
+    type: String
+  },
+  Country: {
+    type: String
+  },
+  Department: {
+    type: String
+  },
+  Skills: {
+    type: []
+  },
+  CLevel: {
+    type: String
+  },
+  Phone: {
+    type: String
   }
 });
 module.exports = mongoose.model("User", User);

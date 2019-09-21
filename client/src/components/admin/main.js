@@ -100,18 +100,22 @@ const useStyles = makeStyles(theme => ({
 
 export default function Main(props) {
   const classes = useStyles();
-  const [adminInfo, setAdminInfo] = React.useState({
+  const [userInfo, setUserInfo] = React.useState({
     FullName: "",
-    Email: ""
+    Email: "",
+    Department: "",
+    CLevel: ""
   });
   useEffect(() => {
-    if (adminInfo.FullName === "") {
+    if (userInfo.FullName === "") {
       axios
-        .post("/getadmin", { ID: localStorage.getItem("adminID") })
+        .post("/getuser", { ID: localStorage.getItem("userID") })
         .then(res => {
-          setAdminInfo({
+          setUserInfo({
             Email: res.data.Email,
-            FullName: res.data.FullName
+            FullName: res.data.FullName,
+            Department: res.data.Department,
+            CLevel: res.data.CLevel
           });
         })
         .catch(error => console.log(error));
@@ -125,10 +129,11 @@ export default function Main(props) {
           {/* User Details */}
           <Grid item xs={12} md={8} lg={9}>
             <Jumbotron>
-              <h1 className="display-6">
-                {"User Name: " + adminInfo.FullName}
-              </h1>
-              <p className="lead">{"Email: " + adminInfo.Email}</p>
+              <h1 className="display-6">{"User Name: " + userInfo.FullName}</h1>
+              <hr className="my-2" />
+              <p className="lead">{"Email: " + userInfo.Email}</p>
+              <p className="lead">{"Department: " + userInfo.Department}</p>
+              <p className="lead">{"Competency Level: " + userInfo.CLevel}</p>
               <hr className="my-2" />
               <p></p>
               <p className="lead"></p>

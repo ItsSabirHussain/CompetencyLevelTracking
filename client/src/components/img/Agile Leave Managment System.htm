@@ -1,0 +1,1870 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)http://localhost:3000/empdashboard/notification -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="shortcut icon" href="http://localhost:3000/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="http://localhost:3000/empdashboard/logo192.png">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <link rel="stylesheet" href="./Agile Leave Managment System_files/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Agile Leave Managment System</title>
+  <style type="text/css">body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+</style><style type="text/css">.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+</style><style type="text/css">.App {
+  margin-top: -1.5%;
+  height: 78vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.App-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+@media (min-width: 650px) {
+  .App {
+    background-position: center center;
+  }
+
+  .App-content {
+    align-items: fix-end;
+    justify-content: center;
+  }
+}
+</style><style data-styled="" data-styled-version="4.3.2">
+/* sc-component-id: sc-bdVaJa */
+
+/* sc-component-id: sc-bwzfXH */
+</style><style type="text/css">.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+</style><style data-jss="" data-meta="MuiTouchRipple">
+.MuiTouchRipple-root {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  position: absolute;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.MuiTouchRipple-ripple {
+  opacity: 0;
+  position: absolute;
+}
+.MuiTouchRipple-rippleVisible {
+  opacity: 0.3;
+  animation: MuiTouchRipple-keyframes-enter 550ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(1);
+}
+.MuiTouchRipple-ripplePulsate {
+  animation-duration: 200ms;
+}
+.MuiTouchRipple-child {
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 1;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+.MuiTouchRipple-childLeaving {
+  opacity: 0;
+  animation: MuiTouchRipple-keyframes-exit 550ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.MuiTouchRipple-childPulsate {
+  top: 0;
+  left: 0;
+  position: absolute;
+  animation: MuiTouchRipple-keyframes-pulsate 2500ms cubic-bezier(0.4, 0, 0.2, 1) 200ms infinite;
+}
+@-webkit-keyframes MuiTouchRipple-keyframes-enter {
+  0% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes MuiTouchRipple-keyframes-exit {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes MuiTouchRipple-keyframes-pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.92);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+</style><style data-jss="" data-meta="MuiButtonBase">
+.MuiButtonBase-root {
+  color: inherit;
+  border: 0;
+  cursor: pointer;
+  margin: 0;
+  display: inline-flex;
+  outline: 0;
+  padding: 0;
+  position: relative;
+  align-items: center;
+  user-select: none;
+  border-radius: 0;
+  vertical-align: middle;
+  -moz-appearance: none;
+  justify-content: center;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.MuiButtonBase-root::-moz-focus-inner {
+  border-style: none;
+}
+.MuiButtonBase-root.Mui-disabled {
+  cursor: default;
+  pointer-events: none;
+}
+</style><style data-jss="" data-meta="MuiSvgIcon">
+.MuiSvgIcon-root {
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  font-size: 1.5rem;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  flex-shrink: 0;
+  user-select: none;
+}
+.MuiSvgIcon-colorPrimary {
+  color: #3f51b5;
+}
+.MuiSvgIcon-colorSecondary {
+  color: #f50057;
+}
+.MuiSvgIcon-colorAction {
+  color: rgba(0, 0, 0, 0.54);
+}
+.MuiSvgIcon-colorError {
+  color: #f44336;
+}
+.MuiSvgIcon-colorDisabled {
+  color: rgba(0, 0, 0, 0.26);
+}
+.MuiSvgIcon-fontSizeInherit {
+  font-size: inherit;
+}
+.MuiSvgIcon-fontSizeSmall {
+  font-size: 1.25rem;
+}
+.MuiSvgIcon-fontSizeLarge {
+  font-size: 2.1875rem;
+}
+</style><style data-jss="" data-meta="MuiButton">
+.MuiButton-root {
+  color: rgba(0, 0, 0, 0.87);
+  padding: 6px 16px;
+  font-size: 0.875rem;
+  min-width: 64px;
+  box-sizing: border-box;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.75;
+  border-radius: 4px;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+}
+.MuiButton-root:hover {
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.MuiButton-root.Mui-disabled {
+  color: rgba(0, 0, 0, 0.26);
+}
+@media (hover: none) {
+  .MuiButton-root:hover {
+    background-color: transparent;
+  }
+}
+.MuiButton-root:hover.Mui-disabled {
+  background-color: transparent;
+}
+.MuiButton-label {
+  width: 100%;
+  display: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+}
+.MuiButton-text {
+  padding: 6px 8px;
+}
+.MuiButton-textPrimary {
+  color: #3f51b5;
+}
+.MuiButton-textPrimary:hover {
+  background-color: rgba(63, 81, 181, 0.08);
+}
+@media (hover: none) {
+  .MuiButton-textPrimary:hover {
+    background-color: transparent;
+  }
+}
+.MuiButton-textSecondary {
+  color: #f50057;
+}
+.MuiButton-textSecondary:hover {
+  background-color: rgba(245, 0, 87, 0.08);
+}
+@media (hover: none) {
+  .MuiButton-textSecondary:hover {
+    background-color: transparent;
+  }
+}
+.MuiButton-outlined {
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  padding: 5px 16px;
+}
+.MuiButton-outlined.Mui-disabled {
+  border: 1px solid rgba(0, 0, 0, 0.26);
+}
+.MuiButton-outlinedPrimary {
+  color: #3f51b5;
+  border: 1px solid rgba(63, 81, 181, 0.5);
+}
+.MuiButton-outlinedPrimary:hover {
+  border: 1px solid #3f51b5;
+  background-color: rgba(63, 81, 181, 0.08);
+}
+@media (hover: none) {
+  .MuiButton-outlinedPrimary:hover {
+    background-color: transparent;
+  }
+}
+.MuiButton-outlinedSecondary {
+  color: #f50057;
+  border: 1px solid rgba(245, 0, 87, 0.5);
+}
+.MuiButton-outlinedSecondary:hover {
+  border: 1px solid #f50057;
+  background-color: rgba(245, 0, 87, 0.08);
+}
+.MuiButton-outlinedSecondary.Mui-disabled {
+  border: 1px solid rgba(0, 0, 0, 0.26);
+}
+@media (hover: none) {
+  .MuiButton-outlinedSecondary:hover {
+    background-color: transparent;
+  }
+}
+.MuiButton-contained {
+  color: rgba(0, 0, 0, 0.87);
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 3px 1px -2px rgba(0,0,0,0.12);
+  background-color: #e0e0e0;
+}
+.MuiButton-contained.Mui-focusVisible {
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);
+}
+.MuiButton-contained:active {
+  box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);
+}
+.MuiButton-contained.Mui-disabled {
+  color: rgba(0, 0, 0, 0.26);
+  box-shadow: none;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.MuiButton-contained:hover {
+  background-color: #d5d5d5;
+}
+@media (hover: none) {
+  .MuiButton-contained:hover {
+    background-color: #e0e0e0;
+  }
+}
+.MuiButton-contained:hover.Mui-disabled {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.MuiButton-containedPrimary {
+  color: #fff;
+  background-color: #3f51b5;
+}
+.MuiButton-containedPrimary:hover {
+  background-color: #303f9f;
+}
+@media (hover: none) {
+  .MuiButton-containedPrimary:hover {
+    background-color: #3f51b5;
+  }
+}
+.MuiButton-containedSecondary {
+  color: #fff;
+  background-color: #f50057;
+}
+.MuiButton-containedSecondary:hover {
+  background-color: #c51162;
+}
+@media (hover: none) {
+  .MuiButton-containedSecondary:hover {
+    background-color: #f50057;
+  }
+}
+.MuiButton-colorInherit {
+  color: inherit;
+  border-color: currentColor;
+}
+.MuiButton-sizeSmall {
+  padding: 4px 8px;
+  font-size: 0.8125rem;
+}
+.MuiButton-sizeLarge {
+  padding: 8px 24px;
+  font-size: 0.9375rem;
+}
+.MuiButton-fullWidth {
+  width: 100%;
+}
+</style><style data-jss="" data-meta="MuiCssBaseline">
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+strong, b {
+  font-weight: bolder;
+}
+body {
+  color: rgba(0, 0, 0, 0.87);
+  margin: 0;
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+  background-color: #fafafa;
+}
+@media print {
+  body {
+    background-color: #fff;
+  }
+}
+body::backdrop {
+  background-color: #fafafa;
+}
+</style><style data-jss="" data-meta="MuiPaper">
+.MuiPaper-root {
+  color: rgba(0, 0, 0, 0.87);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  background-color: #fff;
+}
+.MuiPaper-rounded {
+  border-radius: 4px;
+}
+.MuiPaper-elevation0 {
+  box-shadow: none;
+}
+.MuiPaper-elevation1 {
+  box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 2px 1px -1px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation2 {
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 3px 1px -2px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation3 {
+  box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 3px 3px -2px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation4 {
+  box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation5 {
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation6 {
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation7 {
+  box-shadow: 0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation8 {
+  box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation9 {
+  box-shadow: 0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation10 {
+  box-shadow: 0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation11 {
+  box-shadow: 0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation12 {
+  box-shadow: 0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation13 {
+  box-shadow: 0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation14 {
+  box-shadow: 0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation15 {
+  box-shadow: 0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation16 {
+  box-shadow: 0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation17 {
+  box-shadow: 0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation18 {
+  box-shadow: 0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation19 {
+  box-shadow: 0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation20 {
+  box-shadow: 0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation21 {
+  box-shadow: 0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation22 {
+  box-shadow: 0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation23 {
+  box-shadow: 0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation24 {
+  box-shadow: 0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12);
+}
+</style><style data-jss="" data-meta="MuiList">
+.MuiList-root {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  list-style: none;
+}
+.MuiList-padding {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.MuiList-subheader {
+  padding-top: 0;
+}
+</style><style data-jss="" data-meta="MuiTypography">
+.MuiTypography-root {
+  margin: 0;
+}
+.MuiTypography-body2 {
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+}
+.MuiTypography-body1 {
+  font-size: 1rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+}
+.MuiTypography-caption {
+  font-size: 0.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.66;
+  letter-spacing: 0.03333em;
+}
+.MuiTypography-button {
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+}
+.MuiTypography-h1 {
+  font-size: 6rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.01562em;
+}
+.MuiTypography-h2 {
+  font-size: 3.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.00833em;
+}
+.MuiTypography-h3 {
+  font-size: 3rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: 0em;
+}
+.MuiTypography-h4 {
+  font-size: 2.125rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.00735em;
+}
+.MuiTypography-h5 {
+  font-size: 1.5rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.33;
+  letter-spacing: 0em;
+}
+.MuiTypography-h6 {
+  font-size: 1.25rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.0075em;
+}
+.MuiTypography-subtitle1 {
+  font-size: 1rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0.00938em;
+}
+.MuiTypography-subtitle2 {
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.57;
+  letter-spacing: 0.00714em;
+}
+.MuiTypography-overline {
+  font-size: 0.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 2.66;
+  letter-spacing: 0.08333em;
+  text-transform: uppercase;
+}
+.MuiTypography-srOnly {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+.MuiTypography-alignLeft {
+  text-align: left;
+}
+.MuiTypography-alignCenter {
+  text-align: center;
+}
+.MuiTypography-alignRight {
+  text-align: right;
+}
+.MuiTypography-alignJustify {
+  text-align: justify;
+}
+.MuiTypography-noWrap {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.MuiTypography-gutterBottom {
+  margin-bottom: 0.35em;
+}
+.MuiTypography-paragraph {
+  margin-bottom: 16px;
+}
+.MuiTypography-colorInherit {
+  color: inherit;
+}
+.MuiTypography-colorPrimary {
+  color: #3f51b5;
+}
+.MuiTypography-colorSecondary {
+  color: #f50057;
+}
+.MuiTypography-colorTextPrimary {
+  color: rgba(0, 0, 0, 0.87);
+}
+.MuiTypography-colorTextSecondary {
+  color: rgba(0, 0, 0, 0.54);
+}
+.MuiTypography-colorError {
+  color: #f44336;
+}
+.MuiTypography-displayInline {
+  display: inline;
+}
+.MuiTypography-displayBlock {
+  display: block;
+}
+</style><style data-jss="" data-meta="MuiIconButton">
+.MuiIconButton-root {
+  flex: 0 0 auto;
+  color: rgba(0, 0, 0, 0.54);
+  padding: 12px;
+  overflow: visible;
+  font-size: 1.5rem;
+  text-align: center;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 50%;
+}
+.MuiIconButton-root:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.MuiIconButton-root.Mui-disabled {
+  color: rgba(0, 0, 0, 0.26);
+  background-color: transparent;
+}
+@media (hover: none) {
+  .MuiIconButton-root:hover {
+    background-color: transparent;
+  }
+}
+.MuiIconButton-edgeStart {
+  margin-left: -12px;
+}
+.MuiIconButton-sizeSmall.MuiIconButton-edgeStart {
+  margin-left: -3px;
+}
+.MuiIconButton-edgeEnd {
+  margin-right: -12px;
+}
+.MuiIconButton-sizeSmall.MuiIconButton-edgeEnd {
+  margin-right: -3px;
+}
+.MuiIconButton-colorInherit {
+  color: inherit;
+}
+.MuiIconButton-colorPrimary {
+  color: #3f51b5;
+}
+.MuiIconButton-colorPrimary:hover {
+  background-color: rgba(63, 81, 181, 0.08);
+}
+@media (hover: none) {
+  .MuiIconButton-colorPrimary:hover {
+    background-color: transparent;
+  }
+}
+.MuiIconButton-colorSecondary {
+  color: #f50057;
+}
+.MuiIconButton-colorSecondary:hover {
+  background-color: rgba(245, 0, 87, 0.08);
+}
+@media (hover: none) {
+  .MuiIconButton-colorSecondary:hover {
+    background-color: transparent;
+  }
+}
+.MuiIconButton-sizeSmall {
+  padding: 3px;
+  font-size: 1.125rem;
+}
+.MuiIconButton-label {
+  width: 100%;
+  display: flex;
+  align-items: inherit;
+  justify-content: inherit;
+}
+</style><style data-jss="" data-meta="MuiGrid">
+.MuiGrid-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.MuiGrid-item {
+  margin: 0;
+  box-sizing: border-box;
+}
+.MuiGrid-zeroMinWidth {
+  min-width: 0;
+}
+.MuiGrid-direction-xs-column {
+  flex-direction: column;
+}
+.MuiGrid-direction-xs-column-reverse {
+  flex-direction: column-reverse;
+}
+.MuiGrid-direction-xs-row-reverse {
+  flex-direction: row-reverse;
+}
+.MuiGrid-wrap-xs-nowrap {
+  flex-wrap: nowrap;
+}
+.MuiGrid-wrap-xs-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+.MuiGrid-align-items-xs-center {
+  align-items: center;
+}
+.MuiGrid-align-items-xs-flex-start {
+  align-items: flex-start;
+}
+.MuiGrid-align-items-xs-flex-end {
+  align-items: flex-end;
+}
+.MuiGrid-align-items-xs-baseline {
+  align-items: baseline;
+}
+.MuiGrid-align-content-xs-center {
+  align-content: center;
+}
+.MuiGrid-align-content-xs-flex-start {
+  align-content: flex-start;
+}
+.MuiGrid-align-content-xs-flex-end {
+  align-content: flex-end;
+}
+.MuiGrid-align-content-xs-space-between {
+  align-content: space-between;
+}
+.MuiGrid-align-content-xs-space-around {
+  align-content: space-around;
+}
+.MuiGrid-justify-xs-center {
+  justify-content: center;
+}
+.MuiGrid-justify-xs-flex-end {
+  justify-content: flex-end;
+}
+.MuiGrid-justify-xs-space-between {
+  justify-content: space-between;
+}
+.MuiGrid-justify-xs-space-around {
+  justify-content: space-around;
+}
+.MuiGrid-justify-xs-space-evenly {
+  justify-content: space-evenly;
+}
+.MuiGrid-spacing-xs-1 {
+  width: calc(100% + 8px);
+  margin: -4px;
+}
+.MuiGrid-spacing-xs-1 > .MuiGrid-item {
+  padding: 4px;
+}
+.MuiGrid-spacing-xs-2 {
+  width: calc(100% + 16px);
+  margin: -8px;
+}
+.MuiGrid-spacing-xs-2 > .MuiGrid-item {
+  padding: 8px;
+}
+.MuiGrid-spacing-xs-3 {
+  width: calc(100% + 24px);
+  margin: -12px;
+}
+.MuiGrid-spacing-xs-3 > .MuiGrid-item {
+  padding: 12px;
+}
+.MuiGrid-spacing-xs-4 {
+  width: calc(100% + 32px);
+  margin: -16px;
+}
+.MuiGrid-spacing-xs-4 > .MuiGrid-item {
+  padding: 16px;
+}
+.MuiGrid-spacing-xs-5 {
+  width: calc(100% + 40px);
+  margin: -20px;
+}
+.MuiGrid-spacing-xs-5 > .MuiGrid-item {
+  padding: 20px;
+}
+.MuiGrid-spacing-xs-6 {
+  width: calc(100% + 48px);
+  margin: -24px;
+}
+.MuiGrid-spacing-xs-6 > .MuiGrid-item {
+  padding: 24px;
+}
+.MuiGrid-spacing-xs-7 {
+  width: calc(100% + 56px);
+  margin: -28px;
+}
+.MuiGrid-spacing-xs-7 > .MuiGrid-item {
+  padding: 28px;
+}
+.MuiGrid-spacing-xs-8 {
+  width: calc(100% + 64px);
+  margin: -32px;
+}
+.MuiGrid-spacing-xs-8 > .MuiGrid-item {
+  padding: 32px;
+}
+.MuiGrid-spacing-xs-9 {
+  width: calc(100% + 72px);
+  margin: -36px;
+}
+.MuiGrid-spacing-xs-9 > .MuiGrid-item {
+  padding: 36px;
+}
+.MuiGrid-spacing-xs-10 {
+  width: calc(100% + 80px);
+  margin: -40px;
+}
+.MuiGrid-spacing-xs-10 > .MuiGrid-item {
+  padding: 40px;
+}
+.MuiGrid-grid-xs-auto {
+  flex-grow: 0;
+  max-width: none;
+  flex-basis: auto;
+}
+.MuiGrid-grid-xs-true {
+  flex-grow: 1;
+  max-width: 100%;
+  flex-basis: 0;
+}
+.MuiGrid-grid-xs-1 {
+  flex-grow: 0;
+  max-width: 8.333333%;
+  flex-basis: 8.333333%;
+}
+.MuiGrid-grid-xs-2 {
+  flex-grow: 0;
+  max-width: 16.666667%;
+  flex-basis: 16.666667%;
+}
+.MuiGrid-grid-xs-3 {
+  flex-grow: 0;
+  max-width: 25%;
+  flex-basis: 25%;
+}
+.MuiGrid-grid-xs-4 {
+  flex-grow: 0;
+  max-width: 33.333333%;
+  flex-basis: 33.333333%;
+}
+.MuiGrid-grid-xs-5 {
+  flex-grow: 0;
+  max-width: 41.666667%;
+  flex-basis: 41.666667%;
+}
+.MuiGrid-grid-xs-6 {
+  flex-grow: 0;
+  max-width: 50%;
+  flex-basis: 50%;
+}
+.MuiGrid-grid-xs-7 {
+  flex-grow: 0;
+  max-width: 58.333333%;
+  flex-basis: 58.333333%;
+}
+.MuiGrid-grid-xs-8 {
+  flex-grow: 0;
+  max-width: 66.666667%;
+  flex-basis: 66.666667%;
+}
+.MuiGrid-grid-xs-9 {
+  flex-grow: 0;
+  max-width: 75%;
+  flex-basis: 75%;
+}
+.MuiGrid-grid-xs-10 {
+  flex-grow: 0;
+  max-width: 83.333333%;
+  flex-basis: 83.333333%;
+}
+.MuiGrid-grid-xs-11 {
+  flex-grow: 0;
+  max-width: 91.666667%;
+  flex-basis: 91.666667%;
+}
+.MuiGrid-grid-xs-12 {
+  flex-grow: 0;
+  max-width: 100%;
+  flex-basis: 100%;
+}
+@media (min-width:600px) {
+  .MuiGrid-grid-sm-auto {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-sm-true {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-sm-1 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-sm-2 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-sm-3 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-sm-4 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-sm-5 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-sm-6 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-sm-7 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-sm-8 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-sm-9 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-sm-10 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-sm-11 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-sm-12 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:960px) {
+  .MuiGrid-grid-md-auto {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-md-true {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-md-1 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-md-2 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-md-3 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-md-4 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-md-5 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-md-6 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-md-7 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-md-8 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-md-9 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-md-10 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-md-11 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-md-12 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:1280px) {
+  .MuiGrid-grid-lg-auto {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-lg-true {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-lg-1 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-lg-2 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-lg-3 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-lg-4 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-lg-5 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-lg-6 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-lg-7 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-lg-8 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-lg-9 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-lg-10 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-lg-11 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-lg-12 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:1920px) {
+  .MuiGrid-grid-xl-auto {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-xl-true {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-xl-1 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-xl-2 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-xl-3 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-xl-4 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-xl-5 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-xl-6 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-xl-7 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-xl-8 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-xl-9 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-xl-10 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-xl-11 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-xl-12 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+</style><style data-jss="" data-meta="MuiContainer">
+.MuiContainer-root {
+  width: 100%;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+@media (min-width:600px) {
+  .MuiContainer-root {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+@media (min-width:960px) {
+  .MuiContainer-root {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (min-width:600px) {
+  .MuiContainer-fixed {
+    max-width: 600px;
+  }
+}
+@media (min-width:960px) {
+  .MuiContainer-fixed {
+    max-width: 960px;
+  }
+}
+@media (min-width:1280px) {
+  .MuiContainer-fixed {
+    max-width: 1280px;
+  }
+}
+@media (min-width:1920px) {
+  .MuiContainer-fixed {
+    max-width: 1920px;
+  }
+}
+@media (min-width:0px) {
+  .MuiContainer-maxWidthXs {
+    max-width: 444px;
+  }
+}
+@media (min-width:600px) {
+  .MuiContainer-maxWidthSm {
+    max-width: 600px;
+  }
+}
+@media (min-width:960px) {
+  .MuiContainer-maxWidthMd {
+    max-width: 960px;
+  }
+}
+@media (min-width:1280px) {
+  .MuiContainer-maxWidthLg {
+    max-width: 1280px;
+  }
+}
+@media (min-width:1920px) {
+  .MuiContainer-maxWidthXl {
+    max-width: 1920px;
+  }
+}
+</style><style data-jss="" data-meta="MuiDrawer">
+.MuiDrawer-docked {
+  flex: 0 0 auto;
+}
+.MuiDrawer-paper {
+  top: 0;
+  flex: 1 0 auto;
+  height: 100%;
+  display: flex;
+  outline: 0;
+  z-index: 1200;
+  position: fixed;
+  overflow-y: auto;
+  flex-direction: column;
+  -webkit-overflow-scrolling: touch;
+}
+.MuiDrawer-paperAnchorLeft {
+  left: 0;
+  right: auto;
+}
+.MuiDrawer-paperAnchorRight {
+  left: auto;
+  right: 0;
+}
+.MuiDrawer-paperAnchorTop {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: auto;
+  height: auto;
+  max-height: 100%;
+}
+.MuiDrawer-paperAnchorBottom {
+  top: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: auto;
+  max-height: 100%;
+}
+.MuiDrawer-paperAnchorDockedLeft {
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+}
+.MuiDrawer-paperAnchorDockedTop {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.MuiDrawer-paperAnchorDockedRight {
+  border-left: 1px solid rgba(0, 0, 0, 0.12);
+}
+.MuiDrawer-paperAnchorDockedBottom {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+</style><style data-jss="" data-meta="MuiAppBar">
+.MuiAppBar-root {
+  width: 100%;
+  display: flex;
+  z-index: 1100;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+.MuiAppBar-positionFixed {
+  top: 0;
+  left: auto;
+  right: 0;
+  position: fixed;
+}
+.MuiAppBar-positionAbsolute {
+  top: 0;
+  left: auto;
+  right: 0;
+  position: absolute;
+}
+.MuiAppBar-positionSticky {
+  top: 0;
+  left: auto;
+  right: 0;
+  position: sticky;
+}
+.MuiAppBar-positionStatic {
+  position: static;
+}
+.MuiAppBar-positionRelative {
+  position: relative;
+}
+.MuiAppBar-colorDefault {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #f5f5f5;
+}
+.MuiAppBar-colorPrimary {
+  color: #fff;
+  background-color: #3f51b5;
+}
+.MuiAppBar-colorSecondary {
+  color: #fff;
+  background-color: #f50057;
+}
+</style><style data-jss="" data-meta="MuiToolbar">
+.MuiToolbar-root {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.MuiToolbar-gutters {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+@media (min-width:600px) {
+  .MuiToolbar-gutters {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+.MuiToolbar-regular {
+  min-height: 56px;
+}
+@media (min-width:0px) and (orientation: landscape) {
+  .MuiToolbar-regular {
+    min-height: 48px;
+  }
+}
+@media (min-width:600px) {
+  .MuiToolbar-regular {
+    min-height: 64px;
+  }
+}
+.MuiToolbar-dense {
+  min-height: 48px;
+}
+</style><style data-jss="" data-meta="MuiDivider">
+.MuiDivider-root {
+  border: none;
+  height: 1px;
+  margin: 0;
+  flex-shrink: 0;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.MuiDivider-absolute {
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+}
+.MuiDivider-inset {
+  margin-left: 72px;
+}
+.MuiDivider-light {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.MuiDivider-middle {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.MuiDivider-vertical {
+  width: 1px;
+  height: 100%;
+}
+</style><style data-jss="" data-meta="MuiBadge">
+.MuiBadge-root {
+  display: inline-flex;
+  position: relative;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+.MuiBadge-badge {
+  height: 20px;
+  display: flex;
+  padding: 0 6px;
+  z-index: 1;
+  position: absolute;
+  flex-wrap: wrap;
+  font-size: 0.75rem;
+  min-width: 20px;
+  box-sizing: border-box;
+  transition: transform 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  align-items: center;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1;
+  align-content: center;
+  border-radius: 10px;
+  flex-direction: row;
+  justify-content: center;
+}
+.MuiBadge-colorPrimary {
+  color: #fff;
+  background-color: #3f51b5;
+}
+.MuiBadge-colorSecondary {
+  color: #fff;
+  background-color: #f50057;
+}
+.MuiBadge-colorError {
+  color: #fff;
+  background-color: #f44336;
+}
+.MuiBadge-dot {
+  height: 6px;
+  padding: 0;
+  min-width: 6px;
+}
+.MuiBadge-anchorOriginTopRightRectangle {
+  top: 0;
+  right: 0;
+  transform: scale(1) translate(50%, -50%);
+  transform-origin: 100% 0%;
+}
+.MuiBadge-anchorOriginTopRightRectangle.MuiBadge-invisible {
+  transform: scale(0) translate(50%, -50%);
+}
+.MuiBadge-anchorOriginBottomRightRectangle {
+  right: 0;
+  bottom: 0;
+  transform: scale(1) translate(50%, 50%);
+  transform-origin: 100% 100%;
+}
+.MuiBadge-anchorOriginBottomRightRectangle.MuiBadge-invisible {
+  transform: scale(0) translate(50%, 50%);
+}
+.MuiBadge-anchorOriginTopLeftRectangle {
+  top: 0;
+  left: 0;
+  transform: scale(1) translate(-50%, -50%);
+  transform-origin: 0% 0%;
+}
+.MuiBadge-anchorOriginTopLeftRectangle.MuiBadge-invisible {
+  transform: scale(0) translate(-50%, -50%);
+}
+.MuiBadge-anchorOriginBottomLeftRectangle {
+  left: 0;
+  bottom: 0;
+  transform: scale(1) translate(-50%, 50%);
+  transform-origin: 0% 100%;
+}
+.MuiBadge-anchorOriginBottomLeftRectangle.MuiBadge-invisible {
+  transform: scale(0) translate(-50%, 50%);
+}
+.MuiBadge-anchorOriginTopRightCircle {
+  top: 14%;
+  right: 14%;
+  transform: scale(1) translate(50%, -50%);
+  transform-origin: 100% 0%;
+}
+.MuiBadge-anchorOriginTopRightCircle.MuiBadge-invisible {
+  transform: scale(0) translate(50%, -50%);
+}
+.MuiBadge-anchorOriginBottomRightCircle {
+  right: 14%;
+  bottom: 14%;
+  transform: scale(1) translate(50%, 50%);
+  transform-origin: 100% 100%;
+}
+.MuiBadge-anchorOriginBottomRightCircle.MuiBadge-invisible {
+  transform: scale(0) translate(50%, 50%);
+}
+.MuiBadge-anchorOriginTopLeftCircle {
+  top: 14%;
+  left: 14%;
+  transform: scale(1) translate(-50%, -50%);
+  transform-origin: 0% 0%;
+}
+.MuiBadge-anchorOriginTopLeftCircle.MuiBadge-invisible {
+  transform: scale(0) translate(-50%, -50%);
+}
+.MuiBadge-anchorOriginBottomLeftCircle {
+  left: 14%;
+  bottom: 14%;
+  transform: scale(1) translate(-50%, 50%);
+  transform-origin: 0% 100%;
+}
+.MuiBadge-anchorOriginBottomLeftCircle.MuiBadge-invisible {
+  transform: scale(0) translate(-50%, 50%);
+}
+.MuiBadge-invisible {
+  transition: transform 195ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+</style><style data-jss="" data-meta="MuiListItem">
+.MuiListItem-root {
+  width: 100%;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  text-align: left;
+  align-items: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+.MuiListItem-root.Mui-focusVisible {
+  background-color: rgba(0, 0, 0, 0.14);
+}
+.MuiListItem-root.Mui-selected, .MuiListItem-root.Mui-selected:hover {
+  background-color: rgba(0, 0, 0, 0.14);
+}
+.MuiListItem-root.Mui-disabled {
+  opacity: 0.5;
+}
+.MuiListItem-container {
+  position: relative;
+}
+.MuiListItem-dense {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.MuiListItem-alignItemsFlexStart {
+  align-items: flex-start;
+}
+.MuiListItem-divider {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  background-clip: padding-box;
+}
+.MuiListItem-gutters {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.MuiListItem-button {
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.MuiListItem-button:hover {
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+@media (hover: none) {
+  .MuiListItem-button:hover {
+    background-color: transparent;
+  }
+}
+.MuiListItem-secondaryAction {
+  padding-right: 48px;
+}
+</style><style data-jss="" data-meta="MuiListItemIcon">
+.MuiListItemIcon-root {
+  color: rgba(0, 0, 0, 0.54);
+  display: inline-flex;
+  min-width: 56px;
+  flex-shrink: 0;
+}
+.MuiListItemIcon-alignItemsFlexStart {
+  margin-top: 8px;
+}
+</style><style data-jss="" data-meta="MuiListItemText">
+.MuiListItemText-root {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.MuiListItemText-multiline {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+.MuiListItemText-inset {
+  padding-left: 56px;
+}
+</style><style data-jss="" data-meta="makeStyles">
+.makeStyles-submit-163 {
+  margin: 0px 0px 0px;
+}
+.makeStyles-root-164 {
+  display: flex;
+}
+.makeStyles-toolbar-165 {
+  padding-right: 24px;
+}
+.makeStyles-toolbarIcon-166 {
+  display: flex;
+  padding: 0 8px;
+  min-height: 56px;
+  align-items: center;
+  justify-content: flex-end;
+}
+@media (min-width:0px) and (orientation: landscape) {
+  .makeStyles-toolbarIcon-166 {
+    min-height: 48px;
+  }
+}
+@media (min-width:600px) {
+  .makeStyles-toolbarIcon-166 {
+    min-height: 64px;
+  }
+}
+.makeStyles-appBar-167 {
+  z-index: 1201;
+  transition: width 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms,margin 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;
+}
+.makeStyles-appBarShift-168 {
+  width: calc(100% - 240px);
+  transition: width 225ms cubic-bezier(0.4, 0, 0.6, 1) 0ms,margin 225ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;
+  margin-left: 240px;
+}
+.makeStyles-menuButton-169 {
+  margin-right: 36px;
+}
+.makeStyles-menuButtonHidden-170 {
+  display: none;
+}
+.makeStyles-title-171 {
+  flex-grow: 1;
+}
+.makeStyles-drawerPaper-172 {
+  width: 240px;
+  position: relative;
+  transition: width 225ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;
+  white-space: nowrap;
+}
+.makeStyles-drawerPaperClose-173 {
+  width: 56px;
+  overflow-x: hidden;
+  transition: width 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;
+}
+@media (min-width:600px) {
+  .makeStyles-drawerPaperClose-173 {
+    width: 72px;
+  }
+}
+.makeStyles-appBarSpacer-174 {
+  min-height: 56px;
+}
+@media (min-width:0px) and (orientation: landscape) {
+  .makeStyles-appBarSpacer-174 {
+    min-height: 48px;
+  }
+}
+@media (min-width:600px) {
+  .makeStyles-appBarSpacer-174 {
+    min-height: 64px;
+  }
+}
+.makeStyles-content-175 {
+  height: 100vh;
+  overflow: auto;
+  flex-grow: 1;
+}
+.makeStyles-container-176 {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.makeStyles-paper-177 {
+  display: flex;
+  padding: 16px;
+  overflow: auto;
+  flex-direction: column;
+}
+.makeStyles-fixedHeight-178 {
+  height: 240px;
+}
+</style><style data-jss="" data-meta="makeStyles">
+.makeStyles-root-1 {
+  display: flex;
+}
+.makeStyles-toolbar-2 {
+  padding-right: 24px;
+}
+.makeStyles-toolbarIcon-3 {
+  display: flex;
+  padding: 0 8px;
+  min-height: 56px;
+  align-items: center;
+  justify-content: flex-end;
+}
+@media (min-width:0px) and (orientation: landscape) {
+  .makeStyles-toolbarIcon-3 {
+    min-height: 48px;
+  }
+}
+@media (min-width:600px) {
+  .makeStyles-toolbarIcon-3 {
+    min-height: 64px;
+  }
+}
+.makeStyles-appBar-4 {
+  z-index: 1201;
+  transition: width 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms,margin 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;
+}
+.makeStyles-appBarShift-5 {
+  width: calc(100% - 240px);
+  transition: width 225ms cubic-bezier(0.4, 0, 0.6, 1) 0ms,margin 225ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;
+  margin-left: 240px;
+}
+.makeStyles-menuButton-6 {
+  margin-right: 36px;
+}
+.makeStyles-menuButtonHidden-7 {
+  display: none;
+}
+.makeStyles-title-8 {
+  flex-grow: 1;
+}
+.makeStyles-drawerPaper-9 {
+  width: 240px;
+  position: relative;
+  transition: width 225ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;
+  white-space: nowrap;
+}
+.makeStyles-drawerPaperClose-10 {
+  width: 56px;
+  overflow-x: hidden;
+  transition: width 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;
+}
+@media (min-width:600px) {
+  .makeStyles-drawerPaperClose-10 {
+    width: 72px;
+  }
+}
+.makeStyles-appBarSpacer-11 {
+  min-height: 56px;
+}
+@media (min-width:0px) and (orientation: landscape) {
+  .makeStyles-appBarSpacer-11 {
+    min-height: 48px;
+  }
+}
+@media (min-width:600px) {
+  .makeStyles-appBarSpacer-11 {
+    min-height: 64px;
+  }
+}
+.makeStyles-content-12 {
+  height: 100vh;
+  overflow: auto;
+  flex-grow: 1;
+}
+.makeStyles-container-13 {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.makeStyles-paper-14 {
+  display: flex;
+  padding: 16px;
+  overflow: auto;
+  flex-direction: column;
+}
+.makeStyles-fixedHeight-15 {
+  height: 240px;
+}
+</style></head>
+  <body cz-shortcut-listen="true">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div><div class="makeStyles-root-1"><header class="MuiPaper-root MuiPaper-elevation4 MuiAppBar-root MuiAppBar-positionAbsolute makeStyles-appBar-4 makeStyles-appBarShift-5 MuiAppBar-colorPrimary"><div class="MuiToolbar-root MuiToolbar-regular makeStyles-toolbar-2 MuiToolbar-gutters"><button class="MuiButtonBase-root MuiIconButton-root makeStyles-menuButton-6 makeStyles-menuButtonHidden-7 MuiIconButton-colorInherit MuiIconButton-edgeStart" tabindex="0" type="button" aria-label="open drawer"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></span><span class="MuiTouchRipple-root"></span></button><h1 class="MuiTypography-root makeStyles-title-8 MuiTypography-h6 MuiTypography-colorInherit MuiTypography-noWrap">Dashboard</h1><button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit" tabindex="0" type="button"><span class="MuiIconButton-label"><span class="MuiBadge-root"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M10.09 15.59L11.5 17l5-5-5-5-1.41 1.41L12.67 11H3v2h9.67l-2.58 2.59zM19 3H5c-1.11 0-2 .9-2 2v4h2V5h14v14H5v-4H3v4c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"></path></svg><span class="MuiBadge-badge MuiBadge-anchorOriginTopRightRectangle MuiBadge-colorSecondary MuiBadge-invisible"></span></span></span><span class="MuiTouchRipple-root"></span></button></div></header><div class="MuiDrawer-root MuiDrawer-docked"><div class="MuiPaper-root MuiPaper-elevation0 MuiDrawer-paper makeStyles-drawerPaper-9 MuiDrawer-paperAnchorLeft MuiDrawer-paperAnchorDockedLeft"><div class="makeStyles-toolbarIcon-3"><button class="MuiButtonBase-root MuiIconButton-root" tabindex="0" type="button"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path></svg></span><span class="MuiTouchRipple-root"></span></button></div><hr class="MuiDivider-root"><ul class="MuiList-root MuiList-padding"><div><a class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-button" tabindex="0" role="button" aria-disabled="false" href="http://localhost:3000/empdashboard"><div class="MuiListItemIcon-root"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"></path></svg></div><div class="MuiListItemText-root"><span class="MuiTypography-root MuiListItemText-primary MuiTypography-body1">Dashboard</span></div><span class="MuiTouchRipple-root"></span></a><a class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-button" tabindex="0" role="button" aria-disabled="false" href="http://localhost:3000/empdashboard/appleave"><div class="MuiListItemIcon-root"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M18 16v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-5 0h-2v-2h2v2zm0-4h-2V8h2v4zm-1 10c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2z"></path></svg></div><div class="MuiListItemText-root"><span class="MuiTypography-root MuiListItemText-primary MuiTypography-body1">Apply Leave</span></div><span class="MuiTouchRipple-root"></span></a><a class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-button" tabindex="0" role="button" aria-disabled="false" href="http://localhost:3000/empdashboard/notification"><div class="MuiListItemIcon-root"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"></path></svg></div><div class="MuiListItemText-root"><span class="MuiTypography-root MuiListItemText-primary MuiTypography-body1">Notification</span></div><span class="MuiTouchRipple-root"></span></a></div></ul><hr class="MuiDivider-root"></div></div><main class="makeStyles-content-175"><div class="makeStyles-appBarSpacer-174"></div><div class="MuiContainer-root makeStyles-container-176 MuiContainer-maxWidthLg"><div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"><main class="MuiContainer-root MuiContainer-maxWidthSm"><div><h3>Agile Leave Management System</h3><table class="table table-striped" style="margin-top: 20px;"><thead><tr><th>Leave Date</th><th>Status</th><th>Reason</th><th>Action</th></tr></thead><tbody><tr><td>a;slkdjfl;j to adsfjaksdfj</td><td></td><td>as;fljalskfj;lasjdfjdjsaf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>a;slkdjfl;j to adsfjaksdfj</td><td></td><td>as;fljalskfj;lasjdfjdjsaf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>a;slkdjfl;j to adsfjaksdfj</td><td></td><td>as;fljalskfj;lasjdfjdjsaf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>a;slkdjfl;j to adsfjaksdfj</td><td></td><td>as;fljalskfj;lasjdfjdjsaf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>a;slkdjfl;j to adsfjaksdfj</td><td></td><td>as;fljalskfj;lasjdfjdjsaf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>a;slkdjfl;j to adsfjaksdfj</td><td></td><td>as;fljalskfj;lasjdfjdjsaf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>a;slkdjfl;j to adsfjaksdfj</td><td></td><td>as;fljalskfj;lasjdfjdjsaf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>a;slkdjfl;j to adsfjaksdfj</td><td></td><td>as;fljalskfj;lasjdfjdjsaf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>a;slkdjfl;j to adsfjaksdfj</td><td></td><td>as;fljalskfj;lasjdfjdjsaf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>a;slkdjfl;j to adsfjaksdfj</td><td></td><td>as;fljalskfj;lasjdfjdjsaf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>a;slkdjfl;j to adsfjaksdfj</td><td></td><td>as;fljalskfj;lasjdfjdjsaf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>a;slkdjfl;j to adsfjaksdfj</td><td></td><td>as;fljalskfj;lasjdfjdjsaf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>a;slkdjfl;j to adsfjaksdfj</td><td></td><td>as;fljalskfj;lasjdfjdjsaf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>a;slkdjfl;j to adsfjaksdfj</td><td></td><td>as;fljalskfj;lasjdfjdjsaf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>a;slkdjfl;j to adsfjaksdfj</td><td></td><td>as;fljalskfj;lasjdfjdjsaf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>a;slkdjfl;j to adsfjaksdfj</td><td></td><td>as;fljalskfj;lasjdfjdjsaf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>aslfdjalsjf to asjklfajsf</td><td>Pendding</td><td>asldjfal;sdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>aslfdjalsjf to asjklfajsf</td><td>Pendding</td><td>asldjfal;sdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>aslfdjalsjf to asjklfajsf</td><td>Pendding</td><td>asldjfal;sdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>aslfdjalsjf to asjklfajsf</td><td>Pendding</td><td>asldjfal;sdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>aslfdjalsjf to asjklfajsf</td><td>Pendding</td><td>asldjfal;sdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>aslfdjalsjf to asjklfajsf</td><td>Pendding</td><td>asldjfal;sdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>adf to adsf</td><td>Pendding</td><td>asdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>adf to adsf</td><td>Pendding</td><td>asdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>adf to adsf</td><td>Pendding</td><td>asdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>adf to adsf</td><td>Pendding</td><td>asdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>adf to adsf</td><td>Pendding</td><td>asdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>adf to adsf</td><td>Pendding</td><td>asdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>adf to adsf</td><td>Pendding</td><td>asdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>wefw to asdf</td><td>Pendding</td><td>asdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>wefw to asdf</td><td>Pendding</td><td>asdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>wefw to asdf</td><td>Pendding</td><td>asdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>wefw to asdf</td><td>Pendding</td><td>asdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>wefw to asdf</td><td>Pendding</td><td>asdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>wefw to asdf</td><td>Pendding</td><td>asdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>aSD to sadf</td><td>Pendding</td><td>asdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>aSD to sadf</td><td>Pendding</td><td>asdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>aSD to sadf</td><td>Pendding</td><td>asdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>aSD to sadf</td><td>Pendding</td><td>asdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>aSD to sadf</td><td>Pendding</td><td>asdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>aSD to sadf</td><td>Pendding</td><td>asdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>aSD to sadf</td><td>Pendding</td><td>asdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>aSD to sadf</td><td>Pendding</td><td>asdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>aSD to sadf</td><td>Pendding</td><td>asdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>aSD to sadf</td><td>Pendding</td><td>asdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>aSD to sadf</td><td>Pendding</td><td>asdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>aSD to sadf</td><td>Pendding</td><td>asdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>aSD to sadf</td><td>Pendding</td><td>asdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>aSD to sadf</td><td>Pendding</td><td>asdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>aSD to sadf</td><td>Pendding</td><td>asdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>aSD to sadf</td><td>Pendding</td><td>asdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>aSD to sadf</td><td>Pendding</td><td>asdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>aSD to sadf</td><td>Pendding</td><td>asdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>aSD to sadf</td><td>Pendding</td><td>asdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>aSD to sadf</td><td>Pendding</td><td>asdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>aSD to sadf</td><td>Pendding</td><td>asdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>sajj to asjf</td><td>Pendding</td><td>asfkj</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>sajj to asjf</td><td>Pendding</td><td>asfkj</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>saf to asf</td><td>Pendding</td><td>saf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>asdf to asf</td><td>Pendding</td><td>asdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>asdf to sadf</td><td>Pendding</td><td>sadf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr><tr><td>asdf to asdf</td><td>Pendding</td><td>asdf</td><td> <button class="MuiButtonBase-root MuiButton-root makeStyles-submit-163 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="button" name="0001"><span class="MuiButton-label">Delete</span><span class="MuiTouchRipple-root"></span></button></td></tr></tbody></table></div></main></div></div></div><p class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignCenter">Copyright © <a href="http://localhost:3000/">Agile Leave Management</a> 2019.</p></main></div></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script src="./Agile Leave Managment System_files/bundle.js"></script><script src="./Agile Leave Managment System_files/0.chunk.js"></script><script src="./Agile Leave Managment System_files/main.chunk.js"></script><script src="./Agile Leave Managment System_files/main.f9de2586cf4ace319304.hot-update.js"></script>
+
+</body></html>

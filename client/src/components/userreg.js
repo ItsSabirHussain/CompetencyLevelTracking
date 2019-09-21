@@ -58,8 +58,7 @@ export default function UserReg(props) {
     FullName: "",
     ID: "",
     Email: "",
-    Key: "",
-    Interests: localStorage.getItem("interests")
+    Key: ""
   });
 
   const onClick = e => {
@@ -142,16 +141,11 @@ export default function UserReg(props) {
                 }
               />
             </Grid>
-            <Grid item xs={12}>
-              <br></br>
-              <h6>Select your interests</h6>
-              <MultipleSelect />
-            </Grid>
           </Grid>
           <Button
             fullWidth
             variant="contained"
-            color="primary"
+            color="secondary"
             className={classes.submit}
             onClick={onClick}
           >

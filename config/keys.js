@@ -1,4 +1,4 @@
 module.exports = {
-  mongoURI: "mongodb://127.0.0.1:27017/aradnadb",
+  mongoURI: "mongodb://127.0.0.1:27017/soravdb",
   secretOrKey: "secret"
 };

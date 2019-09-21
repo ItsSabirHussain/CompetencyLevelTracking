@@ -13,7 +13,8 @@ const buttonStyles = makeStyles(theme => ({
     margin: theme.spacing(1)
   },
   extendedIcon: {
-    marginRight: theme.spacing(1)
+    marginRight: theme.spacing(1),
+    color: "930004"
   },
   center: {
     marginLeft: "auto",
@@ -48,18 +49,17 @@ const Home = () => {
                 <Link to="/userlogin">
                   <Fab
                     variant="extended"
-                    color="00080b"
+                    color="930004"
                     aria-label="add"
                     className={bStyles.margin}
                   >
-                    <NavigationIcon className={bStyles.extendedIcon} />
-                    Get Started
+                    <NavigationIcon />
+                    User Login
                   </Fab>
                 </Link>
               </div>
             </div>
           </h1>
-          <p>Navigation</p>
         </div>
       </div>
     </div>

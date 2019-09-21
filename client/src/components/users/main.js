@@ -28,9 +28,7 @@ function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {"Copyright © "}
-      Inteligent Turist Guide
-      {new Date().getFullYear()}
-      {"."}
+      Personal Competency Tracking{"  "} {new Date().getFullYear()}
     </Typography>
   );
 }
@@ -120,90 +118,58 @@ export default function Main(props) {
   const classes = useStyles();
   const [userInfo, setUserInfo] = React.useState({
     FullName: "",
-    Email: ""
+    Email: "",
+    Department: "",
+    CLevel: "",
+    Skills: []
   });
-
-  const onClick = e => {
-    console.log(place);
-  };
-  const { latitude, longitude, timestamp, accuracy, error } = usePosition(true);
-
   useEffect(() => {
-    Geocode.fromLatLng("48.8583701", "2.2922926").then(
-      response => {
-        const address = response.results[0].formatted_address;
-        console.log(address);
-      },
-      error => {
-        console.error(error);
-      }
-    );
-
-    // Get latidude & longitude from address.
-    Geocode.fromAddress("Eiffel Tower").then(
-      response => {
-        const { lat, lng } = response.results[0].geometry.location;
-        console.log(lat, lng);
-      },
-      error => {
-        console.error(error);
-      }
-    );
-
     if (userInfo.FullName === "") {
       axios
         .post("/getuser", { ID: localStorage.getItem("userID") })
         .then(res => {
-          console.log(res);
           setUserInfo({
             Email: res.data.Email,
-            FullName: res.data.FullName
+            FullName: res.data.FullName,
+            Department: res.data.Department,
+            CLevel: res.data.CLevel,
+            Skills: res.data.Skills
           });
           console.log(res);
         })
         .catch(error => console.log(error));
     }
   });
-  const [place, setPlace] = useState(null);
   return (
     <main className={classes.content}>
       <div className={classes.appBarSpacer} />
       <Container maxWidth="lg" className={classes.container}>
         <Grid container spacing={3}>
-          {/* User Details */}
           <Grid item xs={12} md={8} lg={9}>
             <Jumbotron>
-              <h1 className="display-6">{"User Name: " + userInfo.FullName}</h1>
-              <p className="lead">{"Email: " + userInfo.Email}</p>
+              <h1 className="display-6">
+                <b>User Name :</b> {userInfo.FullName}
+              </h1>
               <hr className="my-2" />
+              <p className="lead">
+                <b>Email : </b>
+                {userInfo.Email}
+              </p>
+              <p className="lead">
+                <b>Department : </b> {userInfo.Department}
+              </p>
+              <p className="lead">
+                <b>Skills : </b> {userInfo.Skills.join(" , ")}
+              </p>
+
+              <hr className="my-2" />
+              <p className="lead">
+                <b>Competency Level :</b> {userInfo.CLevel}
+              </p>
+
               <p></p>
               <p className="lead"></p>
             </Jumbotron>
-            <Grid item xs={12} md={8} lg={9}>
-              <Grid item xs={12}>
-                <GoogleComponent
-                  apiKey={API_KEY}
-                  language={"en"}
-                  country={"country:in"}
-                  coordinates={true}
-                  onChange={e => {
-                    setPlace({ place: e });
-                  }}
-                />
-              </Grid>
-              <br></br>
-              <Grid item xs={12} md={8} lg={9}>
-                <Button
-                  fullWidth
-                  variant="contained"
-                  color="primary"
-                  className={classes.submit}
-                  onClick={onClick}
-                >
-                  Update Profile
-                </Button>
-              </Grid>
-            </Grid>
           </Grid>
         </Grid>
       </Container>
